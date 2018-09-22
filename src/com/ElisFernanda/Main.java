@@ -2,10 +2,10 @@ package com.ElisFernanda;
 
 public class Main {
 
-    private static int buscaMenor(Produto[] produtos){
+    private static int buscaMenor(Produto[] produtos, int inicio, int termino){
 
         int maisBarato = 0;
-        for(int atual = 0; atual <= 4; atual++){
+        for(int atual = inicio; atual <= termino; atual++){
             if(produtos[atual].getPreco() < produtos[maisBarato].getPreco()){
                 maisBarato = atual;
             }
@@ -23,7 +23,7 @@ public class Main {
          new Produto("Fusca", 17000)
         };
 
-        int maisBarato = buscaMenor(produtos);
+        int maisBarato = buscaMenor(produtos, 0,4);
 
         System.out.println("Posição: " + maisBarato);
         System.out.println("O carro "+ produtos[maisBarato].getNome()+
