@@ -2,7 +2,7 @@ package com.ElisFernanda;
 
 public class Main {
 
-    private static int buscaMenor(Produto[] produtos, int inicio, int termino){
+    public static int buscaMenor(Produto[] produtos, int inicio, int termino){
 
         int maisBarato = 0;
         for(int atual = inicio; atual <= termino; atual++){
